@@ -92,10 +92,7 @@ const updateProjectImages = async (req, res) => {
       });
     }
 
-    project.images = [
-      ...(project.images || []),
-      ...newImages
-    ];
+    project.images = newImages;
 
     await project.save();
 
