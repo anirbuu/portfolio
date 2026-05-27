@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const path = require("path");
 require("dotenv").config();
 
 const contactRoutes = require("./routes/contactRoutes");
@@ -11,7 +12,12 @@ const app = express();
 // ================= MIDDLEWARE =================
 app.use(cors());
 app.use(express.json());
-app.use("/admin", express.static("admin"));
+
+// ================= ADMIN STATIC FILES =================
+app.use(
+  "/admin",
+  express.static(path.join(__dirname, "admin"))
+);
 
 // ================= DATABASE CONNECTION =================
 mongoose
