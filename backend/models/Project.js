@@ -14,9 +14,9 @@ const projectSchema = new mongoose.Schema(
       trim: true
     },
 
-    image: {
-      type: String,
-      required: true
+    images: {
+      type: [String],
+      default: []
     },
 
     category: {

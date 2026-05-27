@@ -213,10 +213,7 @@ function openProjectDetails(index) {
 
   const modalContent = modal.querySelector(".modal-content");
 
-  const projectImages =
-    project.images && project.images.length > 0
-      ? project.images
-      : [project.image];
+  const projectImages = project.images || [];
 
   modalContent.innerHTML = `
     <span class="close" onclick="closeModal()">&times;</span>

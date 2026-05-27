@@ -40,7 +40,9 @@ const addProject = async (req, res) => {
     }
 
     // CLOUDINARY IMAGE URL
-    const image = req.file ? req.file.path : "";
+    const images = req.files
+  ? req.files.map(file => file.path)
+  : [];
 
     const project = new Project({
       title,

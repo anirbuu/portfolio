@@ -11,7 +11,7 @@ const {
 router.get("/", getProjects);
 router.post(
   "/",
-  upload.single("image"),
+  upload.array("images", 6),
   addProject
 );
 
