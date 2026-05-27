@@ -20,30 +20,36 @@ const getProjects = async (req, res) => {
 
 // ADD PROJECT
 const addProject = async (req, res) => {
+
   try {
+
     const {
       title,
       description,
-      image,
       category,
       technologies,
       liveLink,
       githubLink
     } = req.body;
 
-    if (!title || !description || !image) {
+    if (!title || !description) {
       return res.status(400).json({
         success: false,
-        message: "Title, description and image are required"
+        message: "Title and description are required"
       });
     }
+
+    // CLOUDINARY IMAGE URL
+    const image = req.file ? req.file.path : "";
 
     const project = new Project({
       title,
       description,
       image,
       category,
-      technologies,
+      technologies: technologies
+        ? technologies.split(",")
+        : [],
       liveLink,
       githubLink
     });
@@ -57,6 +63,9 @@ const addProject = async (req, res) => {
     });
 
   } catch (error) {
+
+    console.error(error);
+
     res.status(500).json({
       success: false,
       message: "Failed to add project"

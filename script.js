@@ -23,7 +23,7 @@ if (form && msg) {
       msg.textContent = "Sending...";
       msg.style.color = "#38bdf8";
 
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const response = await fetch("https://portfolio-2opz.onrender.com/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -256,7 +256,7 @@ async function loadProjects() {
 
   try {
 
-    const response = await fetch("http://localhost:5000/api/projects");
+    const response = await fetch("https://portfolio-2opz.onrender.com/api/projects");
 
     const data = await response.json();
 
