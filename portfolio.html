@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Anirban's personal portfolio website showcasing web development projects and skills." />
+
+  <title>Anirban | Web Developer Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- FLOATING CLOUDS -->
+  <div class="floating-cloud"></div>
+  <div class="floating-cloud cloud2"></div>
+  <div class="floating-cloud cloud3"></div>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Anirban's Portfolio</div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+
+    <!-- BACKGROUND VIDEO -->
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="Background.mp4" type="video/mp4" />
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <div class="avatar-stage">
+
+        <!-- STRINGS -->
+        <div class="string java"></div>
+        <div class="string css"></div>
+        <div class="string html"></div>
+        <div class="string uiux"></div>
+
+        <!-- SKILL BUBBLES -->
+        <div class="skill-bubbles">
+          <div class="bubble html">HTML</div>
+          <div class="bubble css">CSS</div>
+          <div class="bubble java">Java</div>
+          <div class="bubble uiux">UI/UX</div>
+        </div>
+
+        <!-- PROFILE IMAGE -->
+        <div class="profile-pic">
+          <img src="myphoto.png" alt="Anirban profile picture" />
+        </div>
+
+      </div>
+
+      <h1>
+        Hello, I'm Anirban,
+        <span id="changing-text" class="fade-text">A Web Developer</span>
+      </h1>
+
+      <p>
+        I build modern, responsive websites and interactive web applications.
+      </p>
+
+      <a href="#projects" class="btn">View My Work</a>
+
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section">
+
+    <h2>About Me</h2>
+
+    <p>
+      I am a passionate web developer skilled in HTML, CSS and JavaScript.
+      I enjoy creating clean, responsive and user-friendly websites with modern UI design.
+    </p>
+
+    <div class="skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Responsive Design</span>
+      <span>UI/UX</span>
+    </div>
+
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="section dark">
+
+    <h2>Projects</h2>
+
+    <div class="projects-grid" id="projectsGrid">
+
+  </div>
+
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section">
+
+    <h2>Contact Me</h2>
+
+    <p>Let's work together — feel free to contact me directly.</p>
+
+<form id="contactForm" class="contact-form">
+
+  <input
+    type="text"
+    id="name"
+    name="name"
+    placeholder="Your Name"
+    required
+  >
+
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="Your Email"
+    required
+  >
+
+  <textarea
+    id="message"
+    name="message"
+    placeholder="Your Message"
+    rows="5"
+    required
+  ></textarea>
+
+  <button type="submit" class="btn">
+    Send Message
+  </button>
+
+  <p id="msg"></p>
+
+</form>
+
+<div class="contact-buttons">
+
+      <!-- WHATSAPP -->
+      <a
+        class="btn"
+        target="_blank"
+        rel="noopener"
+        href="https://wa.me/919051371967?text=Hi%20Anirban%2C%20I%20visited%20your%20portfolio"
+      >
+        WhatsApp Me
+      </a>
+
+      <!-- EMAIL -->
+      <a
+        class="btn"
+        target="_blank"
+        rel="noopener"
+        href="mailto:anirbanbakshi5@gmail.com?subject=Portfolio%20Contact"
+      >
+        Email Me
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Anirban's Portfolio | Built with HTML, CSS & JavaScript</p>
+  </footer>
+
+  <!-- E-COMMERCE PROJECT MODAL -->
+  <div id="projectModal" class="modal">
+
+    <div class="modal-content">
+
+      <span class="close" onclick="closeModal()">&times;</span>
+
+      <h2>E-Commerce Website</h2>
+
+      <p>
+        This project is a fully responsive e-commerce UI built using HTML,
+        CSS and JavaScript.
+      </p>
+
+      <!-- PROJECT IMAGES -->
+      <div class="modal-images">
+
+        <img src="Ecommerce-Website/ecom1.png" alt="E-commerce preview 1" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="Ecommerce-Website/ecom2.png" alt="E-commerce preview 2" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="Ecommerce-Website/ecom3.png" alt="E-commerce preview 3" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="Ecommerce-Website/ecom4.png" alt="E-commerce preview 4" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="Ecommerce-Website/ecom5.png" alt="E-commerce preview 5" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="Ecommerce-Website/ecom6.png" alt="E-commerce preview 6" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="Ecommerce-Website/ecom7.png" alt="E-commerce preview 7" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="Ecommerce-Website/ecom8.png" alt="E-commerce preview 8" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="Ecommerce-Website/ecom9.png" alt="E-commerce preview 9" loading="lazy" onclick="openLightbox(this.src)">
+
+      </div>
+
+      <!-- PROJECT VIDEO -->
+      <video controls class="modal-video">
+        <source src="Ecommerce-Website/demo.mp4" type="video/mp4" />
+      </video>
+
+    </div>
+  </div>
+
+  <!-- AI WEBSITE BUILDER MODAL -->
+  <div id="aiModal" class="modal">
+
+    <div class="modal-content">
+
+      <span class="close" onclick="closeModal('AI')">&times;</span>
+
+      <h2>AI Website Builder</h2>
+
+      <p>
+        A modern AI-powered website builder that generates
+        personalized websites from user prompts using a clean
+        responsive interface.
+      </p>
+
+      <!-- PROJECT IMAGES -->
+      <div class="modal-images">
+
+        <img src="AI website/Web1.png" alt="AI website builder preview 1" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="AI website/Web2.png" alt="AI website builder preview 2" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="AI website/Web3.png" alt="AI website builder preview 3" loading="lazy" onclick="openLightbox(this.src)">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImg" src="" alt="Project preview image" />
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
