@@ -241,11 +241,23 @@ function openProjectDetails(index) {
       <h3>Project Description</h3>
 
       <ul>
-        ${project.description
-          .split(".")
-          .filter((point) => point.trim() !== "")
-          .map((point) => `<li>${point.trim()}.</li>`)
-          .join("")}
+        <ul>
+  <li>Fully responsive modern e-commerce frontend design.</li>
+
+  <li>Animated glassmorphism UI with smooth transitions.</li>
+
+  <li>Dynamic product showcase layout with reusable cards.</li>
+
+  <li>Interactive project modal with multi-image gallery.</li>
+
+  <li>Mobile-first responsive optimization for all devices.</li>
+
+  <li>Integrated backend API with MongoDB database support.</li>
+
+  <li>Cloudinary-powered image hosting and management.</li>
+
+  <li>Contact form with real-time email notifications.</li>
+</ul>
       </ul>
     </div>
 
