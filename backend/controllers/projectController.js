@@ -75,7 +75,46 @@ const addProject = async (req, res) => {
   }
 };
 
+const updateProjectImages = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const newImages = req.files
+      ? req.files.map(file => file.path)
+      : [];
+
+    const project = await Project.findById(id);
+
+    if (!project) {
+      return res.status(404).json({
+        success: false,
+        message: "Project not found"
+      });
+    }
+
+    project.images = [
+      ...(project.images || []),
+      ...newImages
+    ];
+
+    await project.save();
+
+    res.status(200).json({
+      success: true,
+      message: "Images added successfully",
+      project
+    });
+
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Failed to update project images"
+    });
+  }
+};
+
 module.exports = {
   getProjects,
-  addProject
+  addProject,
+  updateProjectImages
 };
