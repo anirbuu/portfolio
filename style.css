@@ -592,7 +592,7 @@ footer {
 
   padding: 20px;
   width: 80%;
-  max-width: 800px;
+  max-width: 1100px;
   max-height: 90vh;
 
   overflow-y: auto;
@@ -819,5 +819,114 @@ footer {
   .floating-cloud {
     width: 300px;
     height: 180px;
+  }
+}
+
+/* ================= PROJECT MODAL NEW DESIGN ================= */
+
+.project-modal-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+
+  color: #38bdf8;
+
+  text-shadow:
+    0 0 8px rgba(56, 189, 248, 0.8),
+    0 0 18px rgba(56, 189, 248, 0.5),
+    0 0 35px rgba(56, 189, 248, 0.25);
+}
+
+.project-modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  margin: 25px 0 35px 0;
+}
+
+.project-modal-gallery img {
+  width: 100%;
+  height: 150px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 0 14px rgba(56, 189, 248, 0.18);
+
+  transition: 0.3s ease;
+}
+
+.project-modal-gallery img:hover {
+  transform: scale(1.04);
+  box-shadow:
+    0 0 22px rgba(56, 189, 248, 0.45);
+}
+
+.project-modal-description {
+  max-width: 700px;
+  margin: 0 auto 25px auto;
+
+  padding: 25px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 16px;
+
+  text-align: left;
+
+  box-shadow:
+    0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+.project-modal-description h3 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.project-modal-description ul {
+  padding-left: 22px;
+}
+
+.project-modal-description li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  margin-top: 20px;
+}
+
+/* MOBILE PROJECT MODAL */
+
+@media (max-width: 768px) {
+  .project-modal-title {
+    font-size: 1.6rem;
+  }
+
+  .project-modal-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project-modal-gallery img {
+    height: 180px;
+  }
+
+  .project-modal-description {
+    padding: 18px;
   }
 }

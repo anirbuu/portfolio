@@ -202,7 +202,6 @@ async function loadProjects() {
 
 
 // ================= DYNAMIC PROJECT MODAL =================
-
 function openProjectDetails(index) {
   const project = loadedProjects[index];
 
@@ -214,20 +213,43 @@ function openProjectDetails(index) {
 
   const modalContent = modal.querySelector(".modal-content");
 
+  const projectImages =
+    project.images && project.images.length > 0
+      ? project.images
+      : [project.image];
+
   modalContent.innerHTML = `
     <span class="close" onclick="closeModal()">&times;</span>
 
-    <h2>${project.title}</h2>
+    <h2 class="project-modal-title">
+      ${project.title}
+    </h2>
 
-    <p>${project.description}</p>
+    <div class="project-modal-gallery">
+      ${projectImages
+        .map(
+          (img) => `
+            <img
+              src="${img}"
+              alt="${project.title}"
+              loading="lazy"
+              onclick="openLightbox(this.src)"
+            >
+          `
+        )
+        .join("")}
+    </div>
 
-    <div class="modal-images">
-      <img
-        src="${project.image}"
-        alt="${project.title}"
-        loading="lazy"
-        onclick="openLightbox(this.src)"
-      >
+    <div class="project-modal-description">
+      <h3>Project Description</h3>
+
+      <ul>
+        ${project.description
+          .split(".")
+          .filter((point) => point.trim() !== "")
+          .map((point) => `<li>${point.trim()}.</li>`)
+          .join("")}
+      </ul>
     </div>
 
     <div class="project-links">
