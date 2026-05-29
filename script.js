@@ -170,6 +170,46 @@ async function loadProjects() {
 
     loadedProjects = data.projects || [];
 
+    loadedProjects.unshift({
+  title: "AI Website Builder",
+
+  description:
+    "AI-powered website generation platform with modern responsive UI.",
+
+  details: `
+    • AI-based website generation interface.
+
+    • Clean responsive frontend design.
+
+    • Interactive modern landing page UI.
+
+    • Smooth animations and transitions.
+
+    • Mobile-friendly optimized layout.
+
+    • Modern glassmorphism styling.
+
+    • Multi-image project showcase.
+
+    • Built using HTML, CSS, and JavaScript.
+  `,
+
+  images: [
+    "AI-website/Web1.png",
+    "AI-website/Web2.png",
+    "AI-website/Web3.png"
+  ],
+
+  technologies: [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+
+  liveLink: "",
+  githubLink: ""
+});
+
 
     loadedProjects.forEach((project, index) => {
 
