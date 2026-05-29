@@ -170,6 +170,44 @@ async function loadProjects() {
 
     loadedProjects = data.projects || [];
 
+    loadedProjects.unshift({
+  title: "Price Chart for Services",
+
+  description:
+    "Modern trading dashboard with real-time chart inspired UI.",
+
+  details: `
+    • Interactive trading dashboard inspired interface.
+
+    • Modern candlestick and analytics style design.
+
+    • Responsive financial UI optimized for desktop and mobile.
+
+    • Glassmorphism effects with animated UI elements.
+
+    • Dynamic chart presentation layout.
+
+    • Professional fintech-inspired frontend styling.
+
+    • Multi-image modal gallery system.
+
+    • Built using HTML, CSS, and JavaScript.
+  `,
+
+  images: [
+    "Trading-Dashboard/price-chart.jpeg",
+  ],
+
+  technologies: [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+
+  liveLink: "",
+  githubLink: ""
+});
+
     loadedProjects.forEach((project, index) => {
 
       const card = document.createElement("div");
@@ -178,7 +216,7 @@ async function loadProjects() {
 
       card.innerHTML = `
         <img
-          src="${project.image}"
+          src="${project.images?.[0] || ''}"
           alt="${project.title}"
           loading="lazy"
         >
@@ -241,7 +279,6 @@ function openProjectDetails(index) {
       <h3>Project Description</h3>
 
       <ul>
-        <ul>
   <li>Fully responsive modern e-commerce frontend design.</li>
 
   <li>Animated glassmorphism UI with smooth transitions.</li>
@@ -258,7 +295,6 @@ function openProjectDetails(index) {
 
   <li>Contact form with real-time email notifications.</li>
 </ul>
-      </ul>
     </div>
 
     <div class="project-links">
