@@ -170,43 +170,6 @@ async function loadProjects() {
 
     loadedProjects = data.projects || [];
 
-    loadedProjects.unshift({
-  title: "Price Chart for Services",
-
-  description:
-    "Modern trading dashboard with real-time chart inspired UI.",
-
-  details: `
-    • Interactive trading dashboard inspired interface.
-
-    • Modern candlestick and analytics style design.
-
-    • Responsive financial UI optimized for desktop and mobile.
-
-    • Glassmorphism effects with animated UI elements.
-
-    • Dynamic chart presentation layout.
-
-    • Professional fintech-inspired frontend styling.
-
-    • Multi-image modal gallery system.
-
-    • Built using HTML, CSS, and JavaScript.
-  `,
-
-  images: [
-    "Trading-Dashboard/price-chart.jpeg",
-  ],
-
-  technologies: [
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ],
-
-  liveLink: "",
-  githubLink: ""
-});
 
     loadedProjects.forEach((project, index) => {
 
